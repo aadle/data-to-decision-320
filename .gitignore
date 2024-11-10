@@ -1,2 +1,8 @@
 settings.json
 *.html
+project_1_files/
+*.log
+*.pdf
+tasks_files/
+spark-warehouse/
+project_2_files/
