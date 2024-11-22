@@ -1,0 +1,285 @@
+{
+    "metadata": {
+        "writer_version": "0.7.2"
+    },
+    "components": {
+        "root": {
+            "id": "root",
+            "type": "root",
+            "content": {
+                "appName": "AI Starter"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "handlers": {},
+            "visible": {
+                "expression": true,
+                "binding": "",
+                "reversed": false
+            }
+        },
+        "c0f99a9e-5004-4e75-a6c6-36f17490b134": {
+            "id": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "type": "page",
+            "content": {
+                "pageMode": "wide",
+                "key": "main"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "root",
+            "handlers": {},
+            "visible": {
+                "expression": true,
+                "binding": "",
+                "reversed": false
+            }
+        },
+        "bebc5fe9-63a7-46a7-b0fa-62303555cfaf": {
+            "id": "bebc5fe9-63a7-46a7-b0fa-62303555cfaf",
+            "type": "header",
+            "content": {
+                "text": "@{titles.header_main}"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "handlers": {},
+            "visible": {
+                "expression": true,
+                "binding": "",
+                "reversed": false
+            }
+        },
+        "ns81j2l1g3dd8wsb": {
+            "id": "ns81j2l1g3dd8wsb",
+            "type": "dropdowninput",
+            "content": {
+                "label": "Navigation"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "bebc5fe9-63a7-46a7-b0fa-62303555cfaf"
+        },
+        "vbifnuuvfqsp3a34": {
+            "id": "vbifnuuvfqsp3a34",
+            "type": "page",
+            "content": {
+                "key": "correlation"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "root",
+            "handlers": {}
+        },
+        "b00e0b7cs2g3op4t": {
+            "id": "b00e0b7cs2g3op4t",
+            "type": "page",
+            "content": {
+                "key": "summaries"
+            },
+            "isCodeManaged": false,
+            "position": 2,
+            "parentId": "root",
+            "handlers": {}
+        },
+        "3q3nkovlpgrwrwmg": {
+            "id": "3q3nkovlpgrwrwmg",
+            "type": "page",
+            "content": {
+                "key": "forecasting"
+            },
+            "isCodeManaged": false,
+            "position": 3,
+            "parentId": "root",
+            "handlers": {}
+        },
+        "jyz0mexu9ri92oc8": {
+            "id": "jyz0mexu9ri92oc8",
+            "type": "section",
+            "content": {
+                "title": "Section Title",
+                "contentHAlign": "center"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "handlers": {}
+        },
+        "3ioohlvbyw1d28dd": {
+            "id": "3ioohlvbyw1d28dd",
+            "type": "columns",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "jyz0mexu9ri92oc8",
+            "handlers": {}
+        },
+        "sguxbonaddj7xheo": {
+            "id": "sguxbonaddj7xheo",
+            "type": "column",
+            "content": {
+                "width": "1"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "3ioohlvbyw1d28dd",
+            "handlers": {}
+        },
+        "ffp1bo4rdimrdvkb": {
+            "id": "ffp1bo4rdimrdvkb",
+            "type": "column",
+            "content": {
+                "width": "1",
+                "contentHAlign": "center",
+                "contentVAlign": "center"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "3ioohlvbyw1d28dd",
+            "handlers": {}
+        },
+        "tndolb2878qgdv3p": {
+            "id": "tndolb2878qgdv3p",
+            "type": "plotlygraph",
+            "content": {
+                "spec": "@{map}"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "0m0wf2q56kxukn9t",
+            "handlers": {}
+        },
+        "vxl8bs45ev9ns3zf": {
+            "id": "vxl8bs45ev9ns3zf",
+            "type": "plotlygraph",
+            "content": {
+                "spec": "@{main_fig}"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "ffp1bo4rdimrdvkb",
+            "handlers": {}
+        },
+        "0m0wf2q56kxukn9t": {
+            "id": "0m0wf2q56kxukn9t",
+            "type": "horizontalstack",
+            "content": {
+                "contentHAlign": "center"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "hsl1z4045hyhe1a9",
+            "handlers": {}
+        },
+        "qc0e9sljro9tey3m": {
+            "id": "qc0e9sljro9tey3m",
+            "type": "horizontalstack",
+            "content": {
+                "contentHAlign": "end"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "ffp1bo4rdimrdvkb",
+            "handlers": {}
+        },
+        "goxotiqz6gxdscuu": {
+            "id": "goxotiqz6gxdscuu",
+            "type": "dropdowninput",
+            "content": {
+                "label": "Municipality",
+                "options": "@{muni_JSON}"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "qc0e9sljro9tey3m",
+            "handlers": {
+                "wf-option-change": "handle_municipality"
+            },
+            "visible": {
+                "expression": true,
+                "binding": "",
+                "reversed": false
+            },
+            "binding": {
+                "eventType": "wf-option-change",
+                "stateRef": "main_page.municipalityno"
+            }
+        },
+        "b5xwvjlzp2eg6489": {
+            "id": "b5xwvjlzp2eg6489",
+            "type": "dropdowninput",
+            "content": {
+                "label": "Production type",
+                "options": "@{prod_type}"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "qc0e9sljro9tey3m",
+            "handlers": {
+                "wf-option-change": "handle_data_column"
+            },
+            "binding": {
+                "eventType": "wf-option-change",
+                "stateRef": "main_page.data_column"
+            }
+        },
+        "hsl1z4045hyhe1a9": {
+            "id": "hsl1z4045hyhe1a9",
+            "type": "horizontalstack",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "sguxbonaddj7xheo",
+            "handlers": {}
+        },
+        "4o7c6tmdscfarzso": {
+            "id": "4o7c6tmdscfarzso",
+            "type": "dropdowninput",
+            "content": {
+                "label": "Data source",
+                "options": "{\n\"df_consumption\": \"Consumption\",\n\"df_production\": \"Production\",\n\"df_weather\": \"Weather\",\n\"df_prodcons\": \"Prodcons\"\n}"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "x9wgjiz88pxrhhmf",
+            "handlers": {
+                "wf-option-change": "handle_data_source"
+            },
+            "binding": {
+                "eventType": "wf-option-change",
+                "stateRef": "main_page.data_source"
+            }
+        },
+        "eog17k9bd00w3znz": {
+            "id": "eog17k9bd00w3znz",
+            "type": "horizontalstack",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "jyz0mexu9ri92oc8",
+            "handlers": {}
+        },
+        "1wo54lo67ryn4gzs": {
+            "id": "1wo54lo67ryn4gzs",
+            "type": "columns",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "eog17k9bd00w3znz",
+            "handlers": {}
+        },
+        "x9wgjiz88pxrhhmf": {
+            "id": "x9wgjiz88pxrhhmf",
+            "type": "column",
+            "content": {
+                "width": "1",
+                "contentHAlign": "end"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "1wo54lo67ryn4gzs",
+            "handlers": {}
+        }
+    }
+}
