@@ -29,7 +29,7 @@
             "id": "bebc5fe9-63a7-46a7-b0fa-62303555cfaf",
             "type": "header",
             "content": {
-                "text": "@{my_app.title}"
+                "text": "@{main_page.title}"
             },
             "isCodeManaged": false,
             "position": 0,
@@ -40,7 +40,7 @@
             "id": "o1fe51yvx5v6w6m0",
             "type": "section",
             "content": {
-                "title": "Section Title"
+                "title": ""
             },
             "isCodeManaged": false,
             "position": 1,
@@ -78,20 +78,6 @@
             "parentId": "ycw75g4xxaolqil6",
             "handlers": {
                 "plotly-click": "handle_map_click"
-            }
-        },
-        "j23b0teunweurqyd": {
-            "id": "j23b0teunweurqyd",
-            "type": "dropdowninput",
-            "content": {
-                "label": "Page selection",
-                "options": "{\n\"Main\": \"main\",\n\"correlation\": \"correlation\",\n\"summaries\": \"summaries\",\n\"forecasting\": \"forecasting\"\n}"
-            },
-            "isCodeManaged": false,
-            "position": 0,
-            "parentId": "bebc5fe9-63a7-46a7-b0fa-62303555cfaf",
-            "handlers": {
-                "wf-option-change": "$goToPage_main"
             }
         },
         "l47qzemy9hhj722u": {
@@ -211,7 +197,8 @@
             "type": "dropdowninput",
             "content": {
                 "label": "Data source",
-                "options": "{\n\"df_production\": \"Production\",\n\"df_prodcons\": \"Production and consumption\",\n\"df_weather\": \"Weather\",\n\"df_consumption\": \"Consumption\"\n}\n"
+                "options": "{\n\"df_production\": \"Production\",\n\"df_prodcons\": \"Production and consumption\",\n\"df_weather\": \"Weather\",\n\"df_consumption\": \"Consumption\"\n}\n",
+                "cssClasses": ""
             },
             "isCodeManaged": false,
             "position": 0,
@@ -227,52 +214,700 @@
         "kmfioco3xhpk2zkq": {
             "id": "kmfioco3xhpk2zkq",
             "type": "page",
-            "parentId": "root",
             "content": {
                 "key": "correlation"
             },
-            "handlers": {},
-            "position": 0
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "root",
+            "handlers": {}
         },
         "97pam7jgawlrsat4": {
             "id": "97pam7jgawlrsat4",
             "type": "page",
-            "parentId": "root",
             "content": {
                 "key": "summaries"
             },
-            "handlers": {},
-            "position": 2
+            "isCodeManaged": false,
+            "position": 2,
+            "parentId": "root",
+            "handlers": {}
         },
         "9mme4oahh224yipc": {
             "id": "9mme4oahh224yipc",
             "type": "page",
-            "parentId": "root",
             "content": {
                 "key": "forecasting"
             },
-            "handlers": {},
-            "position": 3
-        },
-        "86tpqn0hsbjdofzg": {
-            "id": "86tpqn0hsbjdofzg",
-            "type": "text",
-            "parentId": "97pam7jgawlrsat4",
-            "content": {
-                "text": "Summaries"
-            },
-            "handlers": {},
-            "position": 0
+            "isCodeManaged": false,
+            "position": 3,
+            "parentId": "root",
+            "handlers": {}
         },
         "it6m41c5vv5ox4o1": {
             "id": "it6m41c5vv5ox4o1",
             "type": "text",
-            "parentId": "kmfioco3xhpk2zkq",
             "content": {
                 "text": "Correlations"
             },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "kmfioco3xhpk2zkq",
+            "handlers": {}
+        },
+        "2dp0dj1quarep8iq": {
+            "id": "2dp0dj1quarep8iq",
+            "type": "columns",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "bebc5fe9-63a7-46a7-b0fa-62303555cfaf",
+            "handlers": {}
+        },
+        "8iddnr4epbwh8f9j": {
+            "id": "8iddnr4epbwh8f9j",
+            "type": "column",
+            "content": {
+                "width": "1"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "2dp0dj1quarep8iq",
+            "handlers": {}
+        },
+        "xknj8eka2acffeyb": {
+            "id": "xknj8eka2acffeyb",
+            "type": "separator",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 2,
+            "parentId": "o1fe51yvx5v6w6m0",
+            "handlers": {}
+        },
+        "w295d17qyvq3sp00": {
+            "id": "w295d17qyvq3sp00",
+            "type": "sidebar",
+            "content": {
+                "startCollapsed": "yes"
+            },
+            "isCodeManaged": false,
+            "position": -2,
+            "parentId": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "handlers": {}
+        },
+        "l6s3tj131q3zqgb1": {
+            "id": "l6s3tj131q3zqgb1",
+            "type": "button",
+            "content": {
+                "text": "Forecasting",
+                "icon": "insights"
+            },
+            "isCodeManaged": false,
+            "position": 3,
+            "parentId": "w295d17qyvq3sp00",
+            "handlers": {
+                "wf-click": "$goToPage_forecasting",
+                "click": "handle_forecasting"
+            }
+        },
+        "xdqaplb35zh0e12w": {
+            "id": "xdqaplb35zh0e12w",
+            "type": "button",
+            "content": {
+                "text": "Summary",
+                "icon": "assessment"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "w295d17qyvq3sp00",
+            "handlers": {
+                "wf-click": "$goToPage_summaries",
+                "click": "handle_summary"
+            }
+        },
+        "4umvfuri11iyjkx4": {
+            "id": "4umvfuri11iyjkx4",
+            "type": "button",
+            "content": {
+                "text": "Correlation",
+                "icon": "stacked_line_chart"
+            },
+            "isCodeManaged": false,
+            "position": 2,
+            "parentId": "w295d17qyvq3sp00",
+            "handlers": {
+                "wf-click": "$goToPage_correlation",
+                "click": "handle_correlation"
+            }
+        },
+        "8bs1b08xtuaaufzz": {
+            "id": "8bs1b08xtuaaufzz",
+            "type": "button",
+            "content": {
+                "text": "Main",
+                "icon": "Home",
+                "buttonColor": "#663399"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "w295d17qyvq3sp00",
+            "handlers": {
+                "wf-click": "$goToPage_main"
+            }
+        },
+        "kz04390y5qdjr4ag": {
+            "id": "kz04390y5qdjr4ag",
+            "type": "section",
+            "content": {
+                "title": "Correlation plot"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "kmfioco3xhpk2zkq",
+            "handlers": {}
+        },
+        "a2t5pclwq74wdxvq": {
+            "id": "a2t5pclwq74wdxvq",
+            "type": "section",
+            "content": {
+                "title": "Forecasting"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "9mme4oahh224yipc",
+            "handlers": {}
+        },
+        "ncbsqchmpiatwp8p": {
+            "id": "ncbsqchmpiatwp8p",
+            "type": "section",
+            "content": {
+                "title": "Summary figures"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "97pam7jgawlrsat4",
+            "handlers": {}
+        },
+        "ryyttwkep1sy4m6h": {
+            "id": "ryyttwkep1sy4m6h",
+            "type": "plotlygraph",
+            "content": {
+                "spec": "@{correlation.fig}"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "kz04390y5qdjr4ag",
+            "handlers": {}
+        },
+        "0kfsdkeoxw5h9231": {
+            "id": "0kfsdkeoxw5h9231",
+            "type": "columns",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "kz04390y5qdjr4ag",
+            "handlers": {}
+        },
+        "dgc3u8ok0faehd7g": {
+            "id": "dgc3u8ok0faehd7g",
+            "type": "column",
+            "content": {
+                "width": "1"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "0kfsdkeoxw5h9231",
+            "handlers": {}
+        },
+        "vwlhn04ykbql5np1": {
+            "id": "vwlhn04ykbql5np1",
+            "type": "column",
+            "content": {
+                "width": "1"
+            },
+            "isCodeManaged": false,
+            "position": 2,
+            "parentId": "0kfsdkeoxw5h9231",
+            "handlers": {}
+        },
+        "6ejkdmhu8od4nv6t": {
+            "id": "6ejkdmhu8od4nv6t",
+            "type": "column",
+            "content": {
+                "width": "1"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "0kfsdkeoxw5h9231",
+            "handlers": {}
+        },
+        "9u1rctr85lfhkrct": {
+            "id": "9u1rctr85lfhkrct",
+            "type": "numberinput",
+            "content": {
+                "label": "Lag",
+                "placeholder": "Lag",
+                "minValue": "0",
+                "maxValue": "14"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "dgc3u8ok0faehd7g",
+            "handlers": {
+                "wf-number-change": "handle_lag"
+            },
+            "binding": {
+                "eventType": "wf-number-change",
+                "stateRef": "correlation.lag"
+            }
+        },
+        "w85jj633i4752pyq": {
+            "id": "w85jj633i4752pyq",
+            "type": "dropdowninput",
+            "content": {
+                "label": "DCT filter",
+                "options": "{\"1\": \"True\",\n\"0\": \"False\"}"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "vwlhn04ykbql5np1",
+            "handlers": {
+                "wf-option-change": "handle_dct_filter"
+            },
+            "binding": {
+                "eventType": "wf-option-change",
+                "stateRef": "correlation.dct_filter"
+            }
+        },
+        "fg4hv5qnn25fqu4t": {
+            "id": "fg4hv5qnn25fqu4t",
+            "type": "numberinput",
+            "content": {
+                "label": "DCT cutoff",
+                "minValue": "1",
+                "maxValue": "50"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "6ejkdmhu8od4nv6t",
+            "handlers": {
+                "wf-number-change": "handle_dct_cutoff"
+            },
+            "binding": {
+                "eventType": "wf-number-change",
+                "stateRef": "correlation.dct_cutoff"
+            }
+        },
+        "0gwy9z9ud5qp8k16": {
+            "id": "0gwy9z9ud5qp8k16",
+            "type": "plotlygraph",
+            "content": {
+                "spec": "@{summary.hist_fig}"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "o350j9rovf2xtq84",
+            "handlers": {}
+        },
+        "mx5kp562fezltvvy": {
+            "id": "mx5kp562fezltvvy",
+            "type": "columns",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "ncbsqchmpiatwp8p",
+            "handlers": {}
+        },
+        "o350j9rovf2xtq84": {
+            "id": "o350j9rovf2xtq84",
+            "type": "column",
+            "content": {
+                "width": "1"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "mx5kp562fezltvvy",
+            "handlers": {}
+        },
+        "ka3lxs3b5cwm6lp5": {
+            "id": "ka3lxs3b5cwm6lp5",
+            "type": "plotlygraph",
+            "content": {
+                "spec": "@{summary.bar_fig}"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "o350j9rovf2xtq84",
+            "handlers": {}
+        },
+        "awlmms9l2lxoqsrc": {
+            "id": "awlmms9l2lxoqsrc",
+            "type": "horizontalstack",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "ncbsqchmpiatwp8p",
+            "handlers": {}
+        },
+        "ic0xdk3nw3m0i5cg": {
+            "id": "ic0xdk3nw3m0i5cg",
+            "type": "columns",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "awlmms9l2lxoqsrc",
+            "handlers": {}
+        },
+        "3dnq9wvjfnr2ivzs": {
+            "id": "3dnq9wvjfnr2ivzs",
+            "type": "column",
+            "content": {
+                "width": "1"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "ic0xdk3nw3m0i5cg",
+            "handlers": {}
+        },
+        "vp9yjme9tad71zjs": {
+            "id": "vp9yjme9tad71zjs",
+            "type": "dropdowninput",
+            "content": {
+                "label": "Main group",
+                "options": "{\"municipality\": \"municipality\", \"branche\": \"branche\"}"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "3dnq9wvjfnr2ivzs",
+            "handlers": {
+                "wf-option-change": "handle_grouped_barplot"
+            },
+            "binding": {
+                "eventType": "wf-option-change",
+                "stateRef": "summary.main_group"
+            }
+        },
+        "bpxfcp6live2aml9": {
+            "id": "bpxfcp6live2aml9",
+            "type": "horizontalstack",
+            "content": {
+                "contentHAlign": "center"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "a2t5pclwq74wdxvq",
+            "handlers": {}
+        },
+        "6p8ww7mamz5sup85": {
+            "id": "6p8ww7mamz5sup85",
+            "type": "horizontalstack",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "bpxfcp6live2aml9",
+            "handlers": {}
+        },
+        "mfl9ngxjjzg4whmx": {
+            "id": "mfl9ngxjjzg4whmx",
+            "type": "dropdowninput",
+            "content": {
+                "label": "Municipality",
+                "options": "@{muni_JSON}"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "6p8ww7mamz5sup85",
+            "binding": {
+                "eventType": "wf-option-change",
+                "stateRef": "forecasting.municipality"
+            }
+        },
+        "hdu7f2nucn68uuyr": {
+            "id": "hdu7f2nucn68uuyr",
+            "type": "horizontalstack",
+            "content": {
+                "contentHAlign": "center"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "a2t5pclwq74wdxvq",
+            "handlers": {}
+        },
+        "7shhe634ppq8jspv": {
+            "id": "7shhe634ppq8jspv",
+            "type": "text",
+            "content": {
+                "text": "# dynamic forecasting didn't work :'(\n",
+                "useMarkdown": "yes",
+                "alignment": "center"
+            },
+            "isCodeManaged": false,
+            "position": 2,
+            "parentId": "vaabkeyo38zvhcuc",
+            "handlers": {}
+        },
+        "vaabkeyo38zvhcuc": {
+            "id": "vaabkeyo38zvhcuc",
+            "type": "horizontalstack",
+            "content": {
+                "contentHAlign": "center"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "hdu7f2nucn68uuyr",
+            "handlers": {}
+        },
+        "ql77lvney98x2hio": {
+            "id": "ql77lvney98x2hio",
+            "type": "image",
+            "content": {
+                "src": "https://media.tenor.com/9PTGVf4BLwYAAAAM/crying-emoji-dies.gif",
+                "caption": "me"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "vaabkeyo38zvhcuc",
             "handlers": {},
-            "position": 0
+            "visible": {
+                "expression": true,
+                "binding": "",
+                "reversed": false
+            }
+        },
+        "b1cbzqj6fq0u32cl": {
+            "id": "b1cbzqj6fq0u32cl",
+            "type": "horizontalstack",
+            "content": {
+                "contentHAlign": "center"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "vaabkeyo38zvhcuc",
+            "handlers": {}
+        },
+        "4in2g9hl6tbafd44": {
+            "id": "4in2g9hl6tbafd44",
+            "type": "plotlygraph",
+            "content": {
+                "spec": "@{forecasting.fig}"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "b1cbzqj6fq0u32cl",
+            "handlers": {}
+        },
+        "t5duk686cjn953ek": {
+            "id": "t5duk686cjn953ek",
+            "type": "sidebar",
+            "content": {
+                "startCollapsed": "yes"
+            },
+            "isCodeManaged": false,
+            "position": -2,
+            "parentId": "kmfioco3xhpk2zkq",
+            "handlers": {}
+        },
+        "pc1o2dxdx9qb4w1z": {
+            "id": "pc1o2dxdx9qb4w1z",
+            "type": "button",
+            "content": {
+                "text": "Forecasting",
+                "icon": "insights"
+            },
+            "isCodeManaged": false,
+            "position": 3,
+            "parentId": "t5duk686cjn953ek",
+            "handlers": {
+                "wf-click": "$goToPage_forecasting",
+                "click": "handle_forecasting"
+            }
+        },
+        "61ut46e3ij2bdmau": {
+            "id": "61ut46e3ij2bdmau",
+            "type": "button",
+            "content": {
+                "text": "Summary",
+                "icon": "assessment"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "t5duk686cjn953ek",
+            "handlers": {
+                "wf-click": "$goToPage_summaries",
+                "click": "handle_summary"
+            }
+        },
+        "kuqfr1qhk9t2viul": {
+            "id": "kuqfr1qhk9t2viul",
+            "type": "button",
+            "content": {
+                "text": "Correlation",
+                "icon": "stacked_line_chart",
+                "buttonColor": "#663399"
+            },
+            "isCodeManaged": false,
+            "position": 2,
+            "parentId": "t5duk686cjn953ek",
+            "handlers": {
+                "wf-click": "$goToPage_correlation",
+                "click": "handle_correlation"
+            }
+        },
+        "eoq07tlnbwjxxjxq": {
+            "id": "eoq07tlnbwjxxjxq",
+            "type": "button",
+            "content": {
+                "text": "Main",
+                "icon": "Home"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "t5duk686cjn953ek",
+            "handlers": {
+                "wf-click": "$goToPage_main"
+            }
+        },
+        "e9oclgfowo77ndwy": {
+            "id": "e9oclgfowo77ndwy",
+            "type": "sidebar",
+            "content": {
+                "startCollapsed": "yes"
+            },
+            "isCodeManaged": false,
+            "position": -2,
+            "parentId": "97pam7jgawlrsat4",
+            "handlers": {}
+        },
+        "mca00f7di1bdw2m5": {
+            "id": "mca00f7di1bdw2m5",
+            "type": "button",
+            "content": {
+                "text": "Forecasting",
+                "icon": "insights"
+            },
+            "isCodeManaged": false,
+            "position": 3,
+            "parentId": "e9oclgfowo77ndwy",
+            "handlers": {
+                "wf-click": "$goToPage_forecasting",
+                "click": "handle_forecasting"
+            }
+        },
+        "6edfcxxxm1fxbxld": {
+            "id": "6edfcxxxm1fxbxld",
+            "type": "button",
+            "content": {
+                "text": "Summary",
+                "icon": "assessment",
+                "buttonColor": "#663399"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "e9oclgfowo77ndwy",
+            "handlers": {
+                "wf-click": "$goToPage_summaries",
+                "click": "handle_summary"
+            }
+        },
+        "oevcgqrgn3cqp5ig": {
+            "id": "oevcgqrgn3cqp5ig",
+            "type": "button",
+            "content": {
+                "text": "Correlation",
+                "icon": "stacked_line_chart"
+            },
+            "isCodeManaged": false,
+            "position": 2,
+            "parentId": "e9oclgfowo77ndwy",
+            "handlers": {
+                "wf-click": "$goToPage_correlation",
+                "click": "handle_correlation"
+            }
+        },
+        "jviduw1gf4rj8f9o": {
+            "id": "jviduw1gf4rj8f9o",
+            "type": "button",
+            "content": {
+                "text": "Main",
+                "icon": "Home"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "e9oclgfowo77ndwy",
+            "handlers": {
+                "wf-click": "$goToPage_main"
+            }
+        },
+        "26t3ms5tiv0qtbll": {
+            "id": "26t3ms5tiv0qtbll",
+            "type": "sidebar",
+            "content": {
+                "startCollapsed": "yes"
+            },
+            "isCodeManaged": false,
+            "position": -2,
+            "parentId": "9mme4oahh224yipc",
+            "handlers": {}
+        },
+        "kfhtb5l3pzb0g88w": {
+            "id": "kfhtb5l3pzb0g88w",
+            "type": "button",
+            "content": {
+                "text": "Forecasting",
+                "icon": "insights",
+                "buttonColor": "#663399"
+            },
+            "isCodeManaged": false,
+            "position": 3,
+            "parentId": "26t3ms5tiv0qtbll",
+            "handlers": {
+                "wf-click": "$goToPage_forecasting",
+                "click": "handle_forecasting"
+            }
+        },
+        "tp0plx5pj1dq0y1b": {
+            "id": "tp0plx5pj1dq0y1b",
+            "type": "button",
+            "content": {
+                "text": "Summary",
+                "icon": "assessment"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "26t3ms5tiv0qtbll",
+            "handlers": {
+                "wf-click": "$goToPage_summaries",
+                "click": "handle_summary"
+            }
+        },
+        "v9sgom3gwigff3dh": {
+            "id": "v9sgom3gwigff3dh",
+            "type": "button",
+            "content": {
+                "text": "Correlation",
+                "icon": "stacked_line_chart"
+            },
+            "isCodeManaged": false,
+            "position": 2,
+            "parentId": "26t3ms5tiv0qtbll",
+            "handlers": {
+                "wf-click": "$goToPage_correlation",
+                "click": "handle_correlation"
+            }
+        },
+        "ocu8p3pdy3qo10i5": {
+            "id": "ocu8p3pdy3qo10i5",
+            "type": "button",
+            "content": {
+                "text": "Main",
+                "icon": "Home"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "26t3ms5tiv0qtbll",
+            "handlers": {
+                "wf-click": "$goToPage_main"
+            }
         }
     }
 }

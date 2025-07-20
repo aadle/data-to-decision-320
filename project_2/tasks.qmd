@@ -1,0 +1,33 @@
+## Tasks
+### Geographical locations of municipalities
+- [x] Use the Python package geopy to convert municipality names to latitudes and longitudes.
+- [x] Extend the municipality table from part 1 of the project work with the acquired latitudes and longitudes, plus the DK1 and DK2 power regions.
+
+### Weather data
+- [x] Visit the Meteostat webpage and its developer pages. Read up on formatting and the accompanying Python package.
+- [x] Use the latitudes and longitudes to download hourly weather data matching the period and locations (all municipalities) of data from part 1 of the project work.
+- [x] Acquire the distances from the point locations to the nearest weather station (to later use as a proxy for the amount of interpolation of the weather data).
+- [x] Save the data in the Cassandra database.
+
+### Smoothing and outliers/anomalies
+- [x] Plot the purchase price of gas in DKK as a grey shadow.
+    - [x] Use a DCT-based low-pass filter on the same time series and overlay this on the plot with a thick purple line.
+- [ ] Use the data for electricity exchange with Norway.
+    - [x] Estimate the mean and standard deviations of this series. Discuss the numbers briefly.
+    - [x] Re-estimate these using robust statistics. Discuss the effect of changing estimation.
+    - [ ] Given rules used in SPC regarding deviation from the mean before flagging observations as outliers, how large must the electricity exchange be before flagging? Bonus: Would it be feasible in practice to exchange this much?
+
+### Imputation
+- [x] For each of the time series downloaded in parts 1 and 2 of the project work, scan for missing data.
+- [ ] Describe what can/cannot be imputed and how to perform the imputation. Give reasons for your choices and possible alternatives.
+- [x] Perform imputation where possible.
+
+### Synchronization
+- [x] Make a function that takes an hourly time series for a selected weather property for a selected municipality as input (and relevant parameters/descriptors) and resamples it into daily values matching the gas prices for part 1 of the project work.
+- [x] Apply the function on data for the property temperature and a random (selected by Python) municipality. Plot this together with gas purchase prices in DKK where temperature and price should have separate y-axes (left and right) in the same plot.
+
+### Remaining
+- [ ] Create plots with Plotly rather than matplotlib??
+- [ ] Comment more on imputation part as well as SPC
+- [ ] Write comments for the entirety of the code
+- [ ] MAKE THAT FUCKING PLOT THAT SHOWS THE GAPS IN TIME SERIES

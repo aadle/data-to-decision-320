@@ -7,3 +7,6 @@ tasks_files/
 spark-warehouse/
 project_2_files/
 .DS_Store
+*.csv
+data/
+*.ipynb
